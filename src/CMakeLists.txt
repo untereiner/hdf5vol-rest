@@ -83,7 +83,7 @@ if (BUILD_SHARED_LIBS)
       INTERFACE_INCLUDE_DIRECTORIES "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/include>"
       INTERFACE_COMPILE_DEFINITIONS REST_VOL_BUILT_AS_DYNAMIC_LIB=1
   )
-  
+
   #add_dependencies(${REST_VOL_LIBSH_TARGET} ${HDF5_LIBRARIES_TO_EXPORT})
 
   set (install_targets ${install_targets} ${REST_VOL_LIBSH_TARGET})
@@ -123,7 +123,7 @@ endif ()
 #-----------------------------------------------------------------------------
 # Add Target(s) to CMake Install for import into other projects
 #-----------------------------------------------------------------------------
-if (REST_VOL_EXPORTED_TARGETS)
+#if (REST_VOL_EXPORTED_TARGETS)
   if (BUILD_SHARED_LIBS)
     INSTALL_TARGET_PDB (${REST_VOL_LIBSH_TARGET} ${REST_VOL_INSTALL_BIN_DIR} libraries)
   endif ()
@@ -138,7 +138,7 @@ if (REST_VOL_EXPORTED_TARGETS)
       RUNTIME DESTINATION ${REST_VOL_INSTALL_BIN_DIR} COMPONENT libraries
       FRAMEWORK DESTINATION ${REST_VOL_INSTALL_FWRK_DIR} COMPONENT libraries
   )
-endif ()
+#endif ()
 
 #-----------------------------------------------------------------------------
 # Create pkgconfig files

@@ -77,7 +77,7 @@ endif (BUILD_SHARED_LIBS)
 #-----------------------------------------------------------------------------
 # Add Target(s) to CMake Install for import into other projects
 #-----------------------------------------------------------------------------
-if (REST_VOL_EXPORTED_TARGETS)
+#if (REST_VOL_EXPORTED_TARGETS)
   install (
       TARGETS
           ${REST_VOL_TEST_TARGET}
@@ -86,4 +86,4 @@ if (REST_VOL_EXPORTED_TARGETS)
       DESTINATION
           ${REST_VOL_INSTALL_BIN_DIR} COMPONENT testing
   )
-endif ()
+#endif ()

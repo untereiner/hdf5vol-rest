@@ -92,7 +92,7 @@ endif ()
 # Setup the RPATH for the installed executables
 #-----------------------------------------------------------------------------
 SET(CMAKE_SKIP_BUILD_RPATH  FALSE)
-SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE) 
+SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 LIST(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
@@ -105,9 +105,9 @@ ENDIF("${isSystemDir}" STREQUAL "-1")
 # Targets built within this project are exported at Install time for use
 # by other projects using FindH4H5.
 #-----------------------------------------------------------------------------
-if (NOT REST_VOL_EXPORTED_TARGETS)
-  set (REST_VOL_EXPORTED_TARGETS "restvol-targets")
-endif ()
+#if (NOT REST_VOL_EXPORTED_TARGETS)
+#  set (REST_VOL_EXPORTED_TARGETS "restvol-targets")
+#endif ()
 
 
 if(DEFINED ADDITIONAL_CMAKE_PREFIX_PATH AND EXISTS "${ADDITIONAL_CMAKE_PREFIX_PATH}")
@@ -412,7 +412,7 @@ if (PREBUILT_HDF5_DIR)
   )
 else ()
   set (REST_VOL_INCLUDE_DIRECTORIES
-      ${REST_VOL_INCLUDE_DIRECTORIES}    
+      ${REST_VOL_INCLUDE_DIRECTORIES}
       ${HDF5_DIR}
       ${HDF5_BINARY_DIR}
   )

@@ -48,7 +48,7 @@ foreach (example ${examples})
   #-----------------------------------------------------------------------------
   # Add Target(s) to CMake Install for import into other projects
   #-----------------------------------------------------------------------------
-  if (REST_VOL_EXPORTED_TARGETS)
+  #if (REST_VOL_EXPORTED_TARGETS)
     install (
         TARGETS
             ${example}
@@ -57,7 +57,7 @@ foreach (example ${examples})
         DESTINATION
             ${REST_VOL_INSTALL_DATA_DIR}/rest_vol_examples COMPONENT examples
     )
-  endif ()
+  #endif ()
 endforeach (example ${examples})
 
 add_subdirectory(hl ${PROJECT_BINARY_DIR}/examples)

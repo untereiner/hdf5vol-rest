@@ -26,6 +26,13 @@ endif ()
 #-----------------------------------------------------------------------------
 # Add Target(s) to CMake Install for import into other projects
 #-----------------------------------------------------------------------------
+install(
+  TARGETS ${REST_VOL_LIBRARIES_TO_EXPORT} ${REST_VOL_LIB_DEPENDENCIES}
+	EXPORT ${REST_VOL_INSTALL_TARGET}
+  DESTINATION ${REST_VOL_INSTALL_CMAKE_DIR}
+  COMPONENT configinstall
+)
+
 install (
     EXPORT ${REST_VOL_INSTALL_TARGET}
     DESTINATION ${REST_VOL_INSTALL_CMAKE_DIR}
