@@ -33,8 +33,10 @@ endif ()
 #   COMPONENT configinstall
 # )
 
+message(WARNING ${install_targets})
+
 install (
-    EXPORT ${install_targets}
+    EXPORT ${REST_VOL_EXPORTED_TARGETS}
     DESTINATION ${REST_VOL_INSTALL_CMAKE_DIR}
     FILE ${REST_VOL_PACKAGE}${REST_VOL_PACKAGE_EXT}-targets.cmake
     COMPONENT configinstall

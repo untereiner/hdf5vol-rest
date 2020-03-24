@@ -106,7 +106,7 @@ ENDIF("${isSystemDir}" STREQUAL "-1")
 # by other projects using FindH4H5.
 #-----------------------------------------------------------------------------
 #if (NOT REST_VOL_EXPORTED_TARGETS)
-#  set (REST_VOL_EXPORTED_TARGETS "restvol-targets")
+set (REST_VOL_EXPORTED_TARGETS "restvol-targets")
 #endif ()
 
 
